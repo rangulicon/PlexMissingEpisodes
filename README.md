@@ -1,18 +1,22 @@
-.CREDITS
+## CREDITS
+
 	Credit for the credential piece of this script goes to davefunkel here: https://gist.github.com/davefunkel/415a4a09165b8a6027a297085bf812c5
 	Credit for the Plex Scanning section of this script goes to MysticRyuujin here: https://github.com/MysticRyuujin/PlexMissingEpisodes/blob/master/PowerShell.ps1
 
-.OBJECTIVES
+## OBJECTIVES
+
 	Compare you Plex TV Shows to the TVDB database and produce a list of missing episodes and store your Plex cedentials securely
 
-.PRE-REQS
+## PRE-REQS
+
 	1. PowerShell
 	2. TVDB Account
 	3. TVDB API Key
 	4. Plex Account
 	5. Plex Media Server Address
 
-.SCRIPT REGIONS
+## SCRIPT REGIONS
+
 	GENERAL DETAILS
 	GLOBAL CONFIGURATION
 	FUCNTIONS
@@ -24,7 +28,8 @@
 	EXAMPLE LOG ENTRIES
 	END OF CODE
 
-.INSTRUCTIONS
+## INSTRUCTIONS
+
 	1. Make sure you meet all the Pre-Reqs listed above
 	2. Modify the parameters listed below in the CONFIGURATION section for your specific environment
 	3. Run the script with the -PrepareCredentials flag, Example: .\script-name.ps1 -PrepareCredentials
@@ -35,9 +40,11 @@
 	7. If you configured the parameters correctly you will get a text file with all your missing expisodes
 	8. You can now run this script on a schedule and/or automate a process around this it
 	
-.CONFIGURATION
+## CONFIGURATION
+
 	This is the list of parameters you will want to change for your specific environment
 	I'd recommend searching for these in the script and modifying them as needed
+	
 		$scriptName
 			This will be used in file paths below, avoid using spaces and special characters if not necessary
 			The default is $scriptName = "PlexMissingEpisodes"
@@ -72,11 +79,12 @@
 			This is useful if you know there are seasons or episodes that you don't have and/or don't want for a certain series
 			The Example Ignore List can be found below by searching the script for $IgnoreList
 			
-.UPDATES
+## UPDATES
+
 	8/30/2020
-		Added Output to txt file into script
-		Added instructions and explanations for various parts of the script
-		Added the use of an encrypted credential for storing your Plex password
-		Added dedicated parameters for $TheTVDBAuthentication
-		Removed Perl Script
-		Updated ReadMe
+	Added Output to txt file into script
+	Added instructions and explanations for various parts of the script
+	Added the use of an encrypted credential for storing your Plex password
+	Added dedicated parameters for $TheTVDBAuthentication
+	Removed Perl Script
+	Updated ReadMe
